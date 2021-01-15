@@ -18,21 +18,17 @@ class ReportList extends Component {
     render() {
         const { data, loader, eliminar} = this.props; 
         // const users = this.countUsers(data);
-        console.log("Esta es la data" , data.results[0].total)
+        //console.log("Esta es la data" , data.results[0].total)
         var result = 0;  
              
-        {
-            
-
-                for (let i = 0; i < data.count; i++) {
-                    result =  data  && result + data.results[i].total;
-                
+        {    
+                let tope =  data && data.count
+                for (let i = 0; i < tope; i++) {
+                    var temp = data.results && data.results[i].total
+                    result =    result + temp;                   
+                    
                 }
-            
                 
-            
-        
-            
         }
         console.log("Esta es el total" , result)
         

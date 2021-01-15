@@ -19,7 +19,7 @@ export const registerSale = () => (dispatch, getStore) => {
             'Éxito',
             3000
         );
-        dispatch(push('/catalogo'));
+        dispatch(push('/catalogo_user'));
     }).catch(error => {
         console.log('Error:', error);
         NotificationManager.error(
